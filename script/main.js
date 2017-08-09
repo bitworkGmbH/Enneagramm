@@ -1,4 +1,5 @@
 
+var textSpalte2 = " 0 1 2 3 4 5 6 ";
 
 var JSonString = '{"Fragen":[' +
     '{"ID": "1", "Frage": "Das Leben gelingt besser , wenn man das Positive sieht,  anstatt sich am Negativen aufzuhalten."},' + 
@@ -34,6 +35,7 @@ window.onload = function (){
     };
 
 
+
 function myFunktion(){
     document.getElementById("Frage1").innerHTML =  jsonObject.Fragen[0].ID + ". " +  jsonObject.Fragen[0].Frage;
     document.getElementById("Frage2").innerHTML = jsonObject.Fragen[1].ID + ". " + jsonObject.Fragen[1].Frage;
@@ -59,4 +61,30 @@ function myFunktion(){
     document.getElementById("Frage22").innerHTML = jsonObject.Fragen[21].ID + ". " + jsonObject.Fragen[21].Frage;
     document.getElementById("Frage23").innerHTML = jsonObject.Fragen[22].ID + ". " + jsonObject.Fragen[22].Frage;
     document.getElementById("Frage24").innerHTML = jsonObject.Fragen[23].ID + ". " + jsonObject.Fragen[23].Frage;
+
+    document.getElementById("Antwort1").innerHTML = textSpalte2
+    document.getElementById("Antwort2").innerHTML = textSpalte2
+    document.getElementById("Antwort3").innerHTML = textSpalte2
+    document.getElementById("Antwort4").innerHTML = textSpalte2
+    document.getElementById("Antwort5").innerHTML = textSpalte2
+    document.getElementById("Antwort6").innerHTML = textSpalte2
+    document.getElementById("Antwort7").innerHTML = textSpalte2
+    document.getElementById("Antwort8").innerHTML = textSpalte2
+    document.getElementById("Antwort9").innerHTML = textSpalte2
+    document.getElementById("Antwort10").innerHTML = textSpalte2
+    document.getElementById("Antwort11").innerHTML = textSpalte2
+    document.getElementById("Antwort12").innerHTML = textSpalte2
+    document.getElementById("Antwort13").innerHTML = textSpalte2
+    document.getElementById("Antwort14").innerHTML = textSpalte2
+    document.getElementById("Antwort15").innerHTML = textSpalte2
+    document.getElementById("Antwort16").innerHTML = textSpalte2
+    document.getElementById("Antwort17").innerHTML = textSpalte2
+    document.getElementById("Antwort18").innerHTML = textSpalte2
+    document.getElementById("Antwort19").innerHTML = textSpalte2
+    document.getElementById("Antwort20").innerHTML = textSpalte2
+    document.getElementById("Antwort21").innerHTML = textSpalte2
+    document.getElementById("Antwort22").innerHTML = textSpalte2
+    document.getElementById("Antwort23").innerHTML = textSpalte2
+    document.getElementById("Antwort24").innerHTML = textSpalte2
   };
+
