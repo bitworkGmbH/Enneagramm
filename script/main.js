@@ -34,26 +34,24 @@ var tblBody = document.createElement("tbody");
     // creates a table row
     var row = document.createElement("tr");
  
-    for (var j = 0; j < 1; j++) {
-      // Create a <td> element and a text node, make the text
+       // Create a <td> element and a text node, make the text
       // node the contents of the <td>, and put the <td> at
       // the end of the table row
-      switch(j){
-      case 0:
-        var cell = document.createElement("td")
-      var cellText = document.createTextNode(i+1+". "+ Fragen[i]);
-      cell.appendChild(cellText);
-      row.appendChild(cell);  tblBody.appendChild(row);
-      case 1:
+
+    //   linke Spalte:
     var cell = document.createElement("td")
-      var cellText = document.createTextNode(i+1+". ..."+ Fragen[i]);
-      cell.appendChild(cellText);
-      row.appendChild(cell);  tblBody.appendChild(row);
+    var cellText = document.createTextNode(i+1+". "+ Fragen[i]);
+    cell.appendChild(cellText);
+    row.appendChild(cell);  tblBody.appendChild(row);
+    
+    //   rechte Spalte:
+    var cell = document.createElement("td")
+    var cellText = document.createTextNode(Skala);
+    cell.appendChild(cellText);
+    row.appendChild(cell);  tblBody.appendChild(row);
     }
  
     // add the row to the end of the table body
-    }
-  }
  
   // appends <tblBody> into <Table>
   table.appendChild(tblBody);
@@ -92,7 +90,7 @@ var Fragen = ["Das Leben gelingt besser, wenn man das Positive sieht, anstatt si
 
 
 
-
+var Skala = "0 1 2 3 4 5 6"
 
 
 
