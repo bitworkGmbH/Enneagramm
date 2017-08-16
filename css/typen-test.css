@@ -34,20 +34,24 @@ table td + td{  /* this will go to the 2nd column of the table directly */
   /* Smartphone    */
    
 th, td {
-    min-width: 150px;
-    font-size-adjust: 0.4;
-    }      
+       font-size-adjust: 0.4;
+    }   
+
+table { 
+    background-color: orange;
+    width: auto;    
+}   
    
 #imgArrow{
-    width: 60%;
     text-align: center;
-       }
+    background-color: blue;
+    }
 
 #tabelle1{
     background-color: lightcoral;
     margin-left: none;
     float:none; 
-    width:auto;   
+    width:auto;
     font-size-adjust: 0.4;  
     }
 }
@@ -58,13 +62,12 @@ th, td {
  #tabelle1{
     background-color: lightgreen;
     margin-left: none;
-    /* text-align: left;   */
     float:none; 
     width:auto;     
     }
 
 .image{
-    width: 10%;
+    width: 50%;
     height: auto;  
     }
 }

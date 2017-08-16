@@ -130,7 +130,7 @@ overflow:hidden;
 .content{
     background-color: lightcoral;
     margin-left: none;
-    text-align: left; 
+    text-align:left; 
     float:none; 
     width:auto; 
 }
