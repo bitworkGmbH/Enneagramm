@@ -22,7 +22,7 @@ function createTable(){
      tempTable += "</thead>";
 
   
- // Für jede Frage, erstellen wir eine neue Celle für den Fragenteil und für den Antwortteil.
+ // Für jede Frage, erstellen wir eine neue Zelle für den Fragenteil und für den Antwortteil.
     for (j=0; j<Fragen.length; j++){
 
         
