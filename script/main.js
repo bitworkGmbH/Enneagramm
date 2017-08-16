@@ -1,5 +1,4 @@
 
-var textSpalte2 = " 0 1 2 3 4 5 6 ";
 
 
 window.onload = function () { 
@@ -7,66 +6,66 @@ window.onload = function () {
 }
 
 
+    // create table with for loop and html table tags
+
 function createTable(){
-
-var table = document.getElementById("tabelle1");
-
-// Create an empty <thead> element and add it to the table:
-var header = table.createTHead();
-
-// Create an empty <tr> element and add it to the first position of <thead>:
-var hrow = header.insertRow(0);    
-
-// Insert a new cell (<td>) at the first position of the "new" <tr> element:
-var hcell = hrow.insertCell(0);
-
-// Add some text in the new cell:
-hcell.innerHTML = "<b>table header</b>"; 
-
-
-// create table body
-
-
-var tblBody = document.createElement("tbody");
- 
-  // creating all cells
-  for (var i = 0; i <= 23; i++) {
-    // creates a table row
-    var row = document.createElement("tr");
- 
-       // Create a <td> element and a text node, make the text
-      // node the contents of the <td>, and put the <td> at
-      // the end of the table row
-
-    //   linke Spalte:
-    var cell = document.createElement("td")
-    var cellText = document.createTextNode(i+1+". "+ Fragen[i]);
-    cell.appendChild(cellText);
-    row.appendChild(cell);  tblBody.appendChild(row);
     
-    //   rechte Spalte:
-    var cell = document.createElement("td")
-    var cellText = document.createTextNode(Skala);
-    cell.appendChild(cellText);
-    row.appendChild(cell);  tblBody.appendChild(row);
+  
+ var tempTable = "<thead>";
+     tempTable += "";
+     tempTable += "<tr>";
+     tempTable +=    "<td>" + "<p id=heading>"+ Ueberschrift +"</p>";
+     tempTable +=    "</td>";
+     tempTable +=    "<td>" + imgArrow + "<p id=heading>"+ Ueberschrift2 +"</p>";
+     tempTable +=    "</td>";
+     tempTable += "</tr>";
+     tempTable += "</thead>";
+
+  
+ // Für jede Frage, erstellen wir eine neue Celle für den Fragenteil und für den Antwortteil.
+    for (j=0; j<Fragen.length; j++){
+
+        
+        tempTable += "<tr>";
+        tempTable +=    "<td>";
+        tempTable +=        j + ". " ;
+        tempTable +=        Fragen[j]; 
+        tempTable +=    "</td>" ;
+        tempTable +=    "<td>" ;
+        tempTable +=       Skala; 
+        tempTable +=    "</td>";  
+        tempTable += "</tr>";
     }
- 
-    // add the row to the end of the table body
- 
-  // appends <tblBody> into <Table>
-  table.appendChild(tblBody);
-  // sets the border attribute of tbl to 2;
-  tbl.setAttribute("border", "2");
-
-
+        
+    
+         
+    document.getElementById("tabelle1").innerHTML += tempTable;
 }
 
 
 
+
+
+
+var Ueberschrift = " Bitte erst alle 115 Fragen beantworten, dann Streifen rechts nach hinten falten und Auswertung vornehmen.";
+
+var Ueberschrift2= "<p>stimmt nicht &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;stimmt</p>";
+
+var imgArrow= "<img  src='images/double-arrow.png'>"
+
+var Skala = "0 1 2 3 4 5 6";
+
+
+
+
+
+
+// Array mit Interviewfragen:
+
 var Fragen = ["Das Leben gelingt besser, wenn man das Positive sieht, anstatt sich am Negativen aufzuhalten.", 
 "Ich kann auch emotional sehr angespannte Situationen nüchtern und mit Abstand betrachten.", 
 "Ich arbeite gerne innerhalb einer Institution.",
-"Wichtig an einem Menschen ist, dass er etwas &quot;darstellt&quot;.",
+"Wichtig an einem Menschen ist, dass er etwas 'darstellt'.",
 "Ich möchte unabhängig sein.",
 "Am wichtigsten ist mir, dass sich die Menschen bei mir wohlfühlen.",
 "Für mich ist es wichtig die Zukunft zu planen, damit ich weiß, was auf mich zukommt.",
@@ -80,17 +79,13 @@ var Fragen = ["Das Leben gelingt besser, wenn man das Positive sieht, anstatt si
 "Das Leben ist wie ein Theaterstück, bei dem ich gleichzeitig Zuschauer und Schauspieler bin.",
 "Für mein berufliches Fortkommen bin ich bereit, Ehe, Familie oder Freunde hintanzustellen.",
 "Mich plagt oft ein schlechtes Gewissen.",
-"Ich habe den Eindruck, dass sogenannte &quot;Autoritäten&quot; oft inkompetent sind, aber ich zögere meist, gegen sie vorzugehen.",
+"Ich habe den Eindruck, dass sogenannte 'Autoritäten' oft inkompetent sind, aber ich zögere meist, gegen sie vorzugehen.",
 "Ich lasse die Dinge gerne auf mich zukommen- vieles regelt sich dann schon ganz von alleine.",
 "Ich muss wissen, wohin ich gehöre.",
 "Ich genieße es, die Aufmerksamkeit anderer zu erregen und im Mittelpunkt zu stehen.",
 "Ich halte meinen Ärger oft zurück.",
-"Ich habe das Gefühl, nie &quot;ganz erfüllt&quot; sein zu können.",
-"Oft ahne ich, was in anderen vorgeht, bevor sie es aussprechen."]
-
-
-
-var Skala = "0 1 2 3 4 5 6"
+"Ich habe das Gefühl, nie 'ganz erfüllt' sein zu können.",
+"Oft ahne ich, was in anderen vorgeht, bevor sie es aussprechen."];
 
 
 
@@ -107,6 +102,66 @@ var Skala = "0 1 2 3 4 5 6"
 
 
 
+
+
+
+
+
+// // create Table with DOM Model:
+
+
+
+// function createTable(){
+
+// var table = document.getElementById("tabelle1");
+
+// // Create an empty <thead> element and add it to the table:
+// var header = table.createTHead();
+
+// // Create an empty <tr> element and add it to the first position of <thead>:
+// var hrow = header.insertRow(0);    
+
+// // Insert a new cell (<td>) at the first position of the "new" <tr> element:
+// var hcell0 = hrow.insertCell(0);
+// var hcell1 = hrow.insertCell(1);
+
+// // Add some text in the new cell:
+// hcell0.innerHTML = "<p id=heading>"+ Überschrift +"</p>"; 
+// hcell1.innerHTML = imgArrow + Überschrift2;
+// // id="imgArrow"><img  src="images/double-arrow.png"><br>
+// //     <p>stimmt nicht &nbsp; stimmt<p>
+// // create table body
+
+// var tblBody = document.createElement("tbody");
+ 
+//   // creating all cells
+//   for (var i = 0; i < Fragen.length; i++) {
+//     // creates a table row
+//     var row = document.createElement("tr");
+ 
+//        // Create a <td> element and a text node, make the text
+//       // node the contents of the <td>, and put the <td> at
+//       // the end of the table row
+
+//     //   left row + fragen aus array:
+//     var cell = document.createElement("td")
+//     var cellText = document.createTextNode(i+1+". "+ Fragen[i]);
+//     cell.appendChild(cellText);
+//     row.appendChild(cell);  tblBody.appendChild(row);
+    
+//     //   right row + skala:
+//     var cell = document.createElement("td")
+//     var cellText = document.createTextNode(Skala);
+//     cell.appendChild(cellText);
+//     row.appendChild(cell);  tblBody.appendChild(row);
+//     }
+ 
+//     // add the row to the end of the table body
+ 
+//   // appends <tblBody> into <Table>
+//   table.appendChild(tblBody);
+
+// }
 
 
 
@@ -139,24 +194,6 @@ var Skala = "0 1 2 3 4 5 6"
 
 
 
-
-// // super simple Tabelle mit 2 Spalten aus dem Kopf gebaut
-// var 1= "1";
-// var Antwort1= "Antwort1";
-
-// function createTable(){
-//     for (i=0; i<=3; i++){
-
-//     document.getElementById("tabelle1").innerHTML = "<tr>";
-
-//         for (j=0; j<=25; j++){
-//             document.getElementById("tabelle1").innerHTML += "<td>" + 1 + "</td>" +  "<td>" + Antwort1 + "</td>";  
-//                             }
-//         for (k=0; k<=3; k++)
-//     document.getElementById("tabelle1").innerHTML += "</tr>";
-//         } 
-                        
-//    }
 
 
 
