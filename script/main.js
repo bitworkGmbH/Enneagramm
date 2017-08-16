@@ -1,6 +1,51 @@
 
 var textSpalte2 = " 0 1 2 3 4 5 6 ";
 
+
+window.onload = function () { 
+    createTable();
+}
+
+// super simple Tabelle mit 2 Spalten aus dem Kopf gebaut
+var Frage1= "Frage1";
+var Antwort1= "Antwort1";
+
+function createTable(){
+    for (i=0; i<=3; i++){
+
+    document.getElementById("tabelle1").innerHTML = "<tr>";
+
+        for (j=0; j<=25; j++){
+            document.getElementById("tabelle1").innerHTML += "<td>" + Frage1 + "</td>" +  "<td>" + Antwort1 + "</td>";  
+                            }
+        for (k=0; k<=3; k++)
+    document.getElementById("tabelle1").innerHTML += "</tr>";
+        } 
+                        
+   }
+
+
+
+/* /* 
+document.getElementById("tabelle1").innerHTML = text1; */
+
+/* 
+/* <tr>
+    <th><p>Bitte erst alle 115 Fragen beantworten, dann Streifen rechts nach hinten falten und Auswertung vornehmen.<p>  </th>
+    <td id="imgArrow"><img  src="images/double-arrow.png"><br>
+    <p>stimmt nicht &nbsp; stimmt<p> </td> 
+  </tr> */
+
+
+
+
+
+
+
+
+
+
+    /* 
 var JSonString = '{"Fragen":[' +
     '{"ID": "1", "Frage": "Das Leben gelingt besser, wenn man das Positive sieht, anstatt sich am Negativen aufzuhalten."},' +
     '{"ID": "2", "Frage": "Ich kann auch emotional sehr angespannte Situationen nüchtern und mit Abstand betrachten."},' +
@@ -42,7 +87,12 @@ function setTableInhalt(pJsonObject) {
         document.getElementById('Antwort' + i).innerHTML = textSpalte2;
         document.getElementById('Frage' + i).innerHTML = pJsonObject.Fragen[i - 1].ID + ". " + pJsonObject.Fragen[i - 1].Frage;
         };
-};
+}; */
+
+
+
+
+
 
 
 // function myFunktion(){
@@ -96,4 +146,3 @@ function setTableInhalt(pJsonObject) {
 //     document.getElementById("Antwort23").innerHTML = textSpalte2
 //     document.getElementById("Antwort24").innerHTML = textSpalte2
 //   };
-
