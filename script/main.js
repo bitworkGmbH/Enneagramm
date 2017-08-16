@@ -34,18 +34,25 @@ var tblBody = document.createElement("tbody");
     // creates a table row
     var row = document.createElement("tr");
  
-    for (var j = 0; j < 2; j++) {
+    for (var j = 0; j < 1; j++) {
       // Create a <td> element and a text node, make the text
       // node the contents of the <td>, and put the <td> at
       // the end of the table row
-      var cell = document.createElement("td");
+      switch(j){
+      case 0:
+        var cell = document.createElement("td")
       var cellText = document.createTextNode(i+1+". "+ Fragen[i]);
       cell.appendChild(cellText);
-      row.appendChild(cell);
+      row.appendChild(cell);  tblBody.appendChild(row);
+      case 1:
+    var cell = document.createElement("td")
+      var cellText = document.createTextNode(i+1+". ..."+ Fragen[i]);
+      cell.appendChild(cellText);
+      row.appendChild(cell);  tblBody.appendChild(row);
     }
  
     // add the row to the end of the table body
-    tblBody.appendChild(row);
+    }
   }
  
   // appends <tblBody> into <Table>
